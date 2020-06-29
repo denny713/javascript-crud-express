@@ -2,7 +2,7 @@
   "name": "javascript-crud",
   "version": "1.0.0",
   "description": "JavaScript CRUD Function With MySQL",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "https://github.com/denny713/javascript-crud.git",
   "author": "Denny Afrizal <denny.afrizal@alfadigital.id>",
   "license": "MIT",

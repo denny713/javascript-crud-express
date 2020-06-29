@@ -3,7 +3,8 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize(koneksi.db, koneksi.user, koneksi.pass, {
     host: koneksi.host,
     dialect: koneksi.dialect,
-    operatorsAliases: false,
+    freezeTableName: true,
+    operatorsAliases: 0,
     pool: {
         max: koneksi.pool.max,
         min: koneksi.pool.min,
