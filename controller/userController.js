@@ -50,10 +50,16 @@ exports.findOne = (request, response) => {
 
 exports.update = (request, response) => {
     const username = request.params.username;
-    User.update(request.body, {
+    const user = {
+        username: request.body.username,
+        nama: request.body.nama,
+        password: sha256(request.body.password),
+        status: request.body.status
+    };
+    User.update(user, {
         where: {username: username}
     }).then(num => {
-        if (num === 1) {
+        if (num.length === 1) {
             response.send({
                 message: "Berhasil Update Data"
             });
@@ -74,7 +80,7 @@ exports.delete = (request, response) => {
     User.destroy({
         where: {username: username}
     }).then(num => {
-        if (num === 1) {
+        if (num.length === 1) {
             response.send({
                 message: "Sukses Hapus Data"
             });
