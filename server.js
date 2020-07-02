@@ -14,8 +14,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-const db = require("./model");
-db.sequelize.sync();
+// const db = require("./model");
+// db.sequelize.sync({
+//     force: true
+// }).then(() => {
+//     console.log("Re-Sync DB");
+// });
 
 require("./route/route")(app);
 

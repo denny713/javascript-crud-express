@@ -1,7 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
-    const User = sequelize.define("user", {
+    const User = sequelize.define("User", {
         username: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
+            primaryKey: true
         },
         nama: {
             type: Sequelize.STRING
@@ -12,6 +13,8 @@ module.exports = (sequelize, Sequelize) => {
         status: {
             type: Sequelize.INTEGER
         }
+    }, {
+        tableName: 'user'
     });
     return User;
 };

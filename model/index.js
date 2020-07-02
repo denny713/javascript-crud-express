@@ -10,6 +10,9 @@ const sequelize = new Sequelize(koneksi.db, koneksi.user, koneksi.pass, {
         min: koneksi.pool.min,
         acquire: koneksi.pool.acquire,
         idle: koneksi.pool.idle
+    },
+    define: {
+        timestamps: false
     }
 });
 

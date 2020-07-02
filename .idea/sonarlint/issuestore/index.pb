@@ -16,3 +16,5 @@ A
 config/koneksi.js,f\c\fc0a77f8ca8371439a0564760a8f727f425b5f9b
 L
 controller/userController.js,6\f\6fca393f71b59107e9f65ba54027f69c42a500aa
+9
+	yarn.lock,5\3\53585a096fe3a3b96321113856ae62602995a33b
